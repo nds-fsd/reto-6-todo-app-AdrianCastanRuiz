@@ -4,11 +4,6 @@ import { useState, useEffect } from 'react';
 import AgregarTarea from '../Components/AgregarTareas';
 
 
-
-
-
-
-
 function App() {
   
 
@@ -54,7 +49,7 @@ function App() {
       </div>
      })}
      
-     <AgregarTarea/>
+     <AgregarTarea setArray={setTareas} />
 
     </div>
     </>

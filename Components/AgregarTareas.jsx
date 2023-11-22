@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const AgregarTarea = () =>{
+const AgregarTarea = ({setArray}) =>{
 
     const [nuevaTarea, setNuevaTarea] = useState('')
      
@@ -17,13 +17,18 @@ const AgregarTarea = () =>{
                 done: false
               })
             
-           
-
             }
             
             )
+            const json = await res.json()
+
+            console.log(json)
+            
 
             setNuevaTarea('');
+            setArray(json)
+            
+            
             
         }
         catch(err){
