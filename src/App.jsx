@@ -2,6 +2,8 @@
 import './App.css'
 import { useState, useEffect } from 'react';
 import AgregarTarea from '../Components/AgregarTareas';
+import EliminarTarea from '../Components/EliminarTarea';
+import TaskComplete from '../Components/TaskComplete';
 
 
 function App() {
@@ -35,21 +37,36 @@ function App() {
 
      getTareas();
     }, [])
-
     
-
+   
 
   return (
     <>
     <h1>LISTA DE TAREAS</h1>
+   
     <div className='main-container'>
 
+
+
+    
      {tareas&&tareas.map((tarea)=>{
-      return <div> <p key={tarea.id}>{tarea.text}</p> <input type="checkbox" />
+      
+      return <div key={"div: " + tarea.id}> <p key={tarea.id}>{tarea.text}</p> 
+      
+       
+      
+      <EliminarTarea key={"delete " + tarea.id} setArray={setTareas} tareaToDelete={tarea}/>
+
+      <TaskComplete  setArray={setTareas} tareaToPatch={tarea} />
+     
       </div>
      })}
+
+
+
+
      
-     <AgregarTarea setArray={setTareas} />
+     <AgregarTarea  setArray={setTareas} />
 
     </div>
     </>

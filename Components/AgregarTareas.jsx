@@ -22,7 +22,7 @@ const AgregarTarea = ({setArray}) =>{
             )
             const json = await res.json()
 
-            console.log(json)
+            
             
 
             setNuevaTarea('');
@@ -36,12 +36,12 @@ const AgregarTarea = ({setArray}) =>{
         }
      }
 
-     console.log(nuevaTarea)
+     
     
     return(
     <div>
     <input type="text" value={nuevaTarea} onChange={(e)=> {setNuevaTarea(e.target.value)}}/>
-    <button onClick={()=> submit(nuevaTarea) } type="submit">Añadir</button>
+    <button onClick={()=> submit(nuevaTarea) } type="submit">Add task</button>
     </div>
        
         
