@@ -37,16 +37,23 @@ const AgregarTarea = ({setArray}) =>{
      }
 
      
-    
-    return(
-    <div>
-    <input type="text" value={nuevaTarea} onChange={(e)=> {setNuevaTarea(e.target.value)}}/>
-    <button onClick={()=> submit(nuevaTarea) } type="submit">Add task</button>
-    </div>
-       
-        
-    )
-}
+  
+
      
     
+    return(
+   
+   <div>
+    <input type="text" value={nuevaTarea} onChange={(e)=> {setNuevaTarea(e.target.value)}}/>
+    <button className="add-task-button" onClick={()=> submit(nuevaTarea) } type="submit">Add task</button>
+    </div>
+    // dont forget to ask how to add a new task by pressing Enter
+    
+        
+    )
+    
+}
+
+   
 export default AgregarTarea;
+

@@ -42,7 +42,7 @@ function App() {
 
   return (
     <>
-    <h1>LISTA DE TAREAS</h1>
+    <h1>TASK LIST</h1>
    
     <div className='main-container'>
 
@@ -51,13 +51,15 @@ function App() {
     
      {tareas&&tareas.map((tarea)=>{
       
-      return <div key={"div: " + tarea.id}> <p key={tarea.id}>{tarea.text}</p> 
+      return <div className='task' key={"div: " + tarea.id}> <p key={tarea.id}>{tarea.text}</p> 
+
+      
+       <TaskComplete  setArray={setTareas} tareaToPatch={tarea} />  
       
        
       
       <EliminarTarea key={"delete " + tarea.id} setArray={setTareas} tareaToDelete={tarea}/>
 
-      <TaskComplete  setArray={setTareas} tareaToPatch={tarea} />
      
       </div>
      })}

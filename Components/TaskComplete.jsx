@@ -18,7 +18,7 @@ const TaskComplete = ({setArray, tareaToPatch}) =>{
       setArray(json)
      }
     return(
-        <input onClick={(e)=> handleClick(e)} value={tareaToPatch.id}  type="checkbox" name="" id="" />
+        <input className="complete-button" onClick={(e)=> handleClick(e)} value={tareaToPatch.id}  type="checkbox"  />
     )
 }
 

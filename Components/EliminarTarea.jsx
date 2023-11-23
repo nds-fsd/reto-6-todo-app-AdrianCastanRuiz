@@ -22,7 +22,7 @@ const EliminarTarea =  ({setArray, tareaToDelete}) => {
 
 
             return(
-                <button onClick={(e)=> handleClick(e)}  value={tareaToDelete.id} >Delete Task</button>
+                <button className="delete-button" onClick={(e)=> handleClick(e)}  value={tareaToDelete.id} >Delete Task</button>
             )
        
     
