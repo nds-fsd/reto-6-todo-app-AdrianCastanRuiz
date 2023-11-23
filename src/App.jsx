@@ -38,6 +38,7 @@ function App() {
      getTareas();
     }, [])
     
+    console.log(tareas)
    
 
   return (

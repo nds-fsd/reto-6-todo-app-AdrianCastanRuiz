@@ -45,7 +45,7 @@ const AgregarTarea = ({setArray}) =>{
    
    <div>
     <input type="text" value={nuevaTarea} onChange={(e)=> {setNuevaTarea(e.target.value)}}/>
-    <button className="add-task-button" onClick={()=> submit(nuevaTarea) } type="submit">Add task</button>
+    <button className="add-task-button" onClick={()=> submit(nuevaTarea) } type="submit">Add new task</button>
     </div>
     // dont forget to ask how to add a new task by pressing Enter
     
