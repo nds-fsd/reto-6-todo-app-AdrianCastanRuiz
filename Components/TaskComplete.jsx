@@ -11,7 +11,7 @@ const TaskComplete = ({setArray, tareaToPatch}) =>{
             "method": "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify( { done: !tareaToPatch.done } )
-        }
+        } 
       )
        
       const json = await res.json()

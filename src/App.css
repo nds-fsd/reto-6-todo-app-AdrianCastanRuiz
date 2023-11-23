@@ -11,6 +11,8 @@ h1{
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 4rem;
+    color: rgb(8, 8, 97);
+    
 }
 
 .main-container{
@@ -40,6 +42,10 @@ h1{
     width: 50px;
     height: 38px;
     margin-top: 4%;
+    background-color: rgb(175, 20, 20);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 .complete-button{
     margin-right: 200px;
