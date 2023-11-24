@@ -1,15 +1,30 @@
 import { useState } from "react";
 
 
-const EliminarTarea =  ({setArray, tareaToDelete}) => {
+const EliminarTarea =  ({setArray, tareaToDelete, tareas}) => {
 
-    const handleClick = async  (e) => {
+    const handleClick =  async (e) => {
+        
 
         const id = e.target.value
+
         const res = await fetch(`http://localhost:3000/todo/${id}`,{"method":"DELETE"})
         const json = await res.json()
 
-        setArray(json)
+       const index = tareas.findIndex(element => element.id == id)
+
+      const tareasUpdated = tareas.filter(element => element.id != id )
+
+       setArray(tareasUpdated)
+
+       console.log(res)
+
+
+
+
+
+
+        // setArray(json)
 
  
     }

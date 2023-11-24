@@ -59,7 +59,7 @@ function App() {
       
        
       
-      <EliminarTarea key={"delete " + tarea.id} setArray={setTareas} tareaToDelete={tarea}/>
+      <EliminarTarea key={"delete " + tarea.id} setArray={setTareas} tareas={tareas} tareaToDelete={tarea}/>
 
      
       </div>
