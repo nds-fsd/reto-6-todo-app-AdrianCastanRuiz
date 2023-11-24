@@ -11,6 +11,7 @@ function App() {
 
 
   const [tareas, setTareas] = useState(null)  
+  const [done, setDone] = useState(false);
 
   useEffect(()=>{
 
@@ -55,11 +56,11 @@ function App() {
       return <div className='task' key={"div: " + tarea.id}> <p key={tarea.id}>{tarea.text}</p> 
 
       
-       <TaskComplete  setArray={setTareas} tareaToPatch={tarea} />  
+       <TaskComplete  setArray={setTareas} tareaToPatch={tarea} tareas={tareas} setDone={setDone}/>  
       
        
       
-      <EliminarTarea key={"delete " + tarea.id} setArray={setTareas} tareas={tareas} tareaToDelete={tarea}/>
+      <EliminarTarea key={"delete " + tarea.id}  setArray={setTareas} tareas={tareas} tareaToDelete={tarea}/>
 
      
       </div>

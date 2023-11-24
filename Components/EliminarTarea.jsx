@@ -17,14 +17,14 @@ const EliminarTarea =  ({setArray, tareaToDelete, tareas}) => {
 
        setArray(tareasUpdated)
 
-       console.log(res)
+     
 
 
 
 
 
 
-        // setArray(json)
+       
 
  
     }

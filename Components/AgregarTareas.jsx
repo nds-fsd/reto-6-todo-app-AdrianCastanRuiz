@@ -36,16 +36,21 @@ const AgregarTarea = ({setArray}) =>{
         }
      }
 
+      const handleKey = (e, tarea)=>{
+       if (e.keyCode == 13){
+        submit(tarea)
+       }
+
+      }
      
-  
 
      
     
     return(
    
    <div>
-    <input type="text" value={nuevaTarea} onChange={(e)=> {setNuevaTarea(e.target.value)}}/>
-    <button className="add-task-button" onClick={()=> submit(nuevaTarea) } type="submit">Add new task</button>
+    <input onKeyDown={(e)=>handleKey(e, nuevaTarea)} type="text" value={nuevaTarea} onChange={(e)=> {setNuevaTarea(e.target.value)}}/>
+    <button className="add-task-button"  onClick={()=> submit(nuevaTarea) } type="submit">Add new task</button>
     </div>
     // dont forget to ask how to add a new task by pressing Enter
     
